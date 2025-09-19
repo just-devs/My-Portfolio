@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> </head>
+    <style>
+      
+  
+      /* Hero Section */
+      .hero {
+        background-image: url("last na.jpg"); /* Replace with your image */
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        color: white;
+        padding: 100px 0;
+        position: relative; /* To position the overlay */
+        display: flex;
+        flex-direction: column; /* Align items vertically */
+        align-items: center;
+        justify-content: center; /* Center vertically */
+      }
+  
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+      }
+  
+      .hero-content {
+        z-index: 1; /* Ensure content is above the overlay */
+      }
+
+      .hero-content h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      font-family: 'Pacifico', cursive;
+      background: linear-gradient(to right, #00c896, #00a875); /* Teal gradient */
+      -webkit-background-clip: text; /* Clip the gradient to the text */
+      -webkit-text-fill-color: transparent; /* Make the text transparent */
+    }
+  
+      .hero h1 {
+        font-size: 3em;
+        margin-bottom: 0.2em;
+      }
+  
+      .hero h2 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+      }
+  
+      .hero p {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+      }
+  
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #00c896; /* Teal color for the button */
+        color: white;
+        text-decoration: none;
+        border-radius: 5px; /* Add rounded corners */
+      }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home">
+    <subheader><div class="hero">
+      <div class="hero-content">
+        <h1>MadeByClyd</h1>
+        <h2>Your Title/Profession</h2>
+        <p>A brief description of yourself and your work.</p>
+        <a href="#about" class="btn">Get to know me</a> </div>
+      </div>
+    </subheader>
+  </section>
+
+
+  <section id="about">
+    <div class="about-content"> 
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I'm a passionate web developer with a love for creating beautiful and functional websites. I have a strong foundation in HTML, CSS, and JavaScript, and I'm always eager to learn new technologies and expand my skillset.</p>
+        <p>I'm particularly interested in front-end development and user experience design. I believe that a website should not only look good but also be easy to use and navigate.</p>
+        <p>In my free time, I enjoy exploring new design trends, experimenting with code, and contributing to open-source projects.</p>
+      </div>
+      <div class="about-image">
+        <img src="broken.jpg" alt="MadeByClyd"> 
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid"> 
+      <div class="project">
+        <img src="images/project1.jpg" alt="Project 1">
+        <div class="project-details">
+          <h3>Project Title 1</h3>
+          <p>Project description...</p>
+          <a href="#" class="btn">View Project</a> 
+        </div>
+      </div>
+      <div class="project">
+        <img src="images/project2.jpg" alt="Project 2">
+        <div class="project-details">
+          <h3>Project Title 2</h3>
+          <p>Project description...</p>
+          <a href="#" class="btn">View Project</a> 
+        </div>
+      </div>
+      </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-content">
+      <div class="contact-form">
+        <form id="contact-form"> 
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p>Feel free to reach out to me with any questions or opportunities.</p>
+        <ul class="social-icons"> 
+          <li>
+            <a href="mailto:youremail@example.com" aria-label="Email">
+              <i class="fas fa-envelope"></i> 
+            </a>
+          </li>
+          <li>
+            <a href="tel:yourphonenumber" aria-label="Phone">
+              <i class="fas fa-phone"></i> 
+            </a>
+          </li>
+          <li>
+            <a href="your_facebook_profile_url" aria-label="Facebook">
+              <i class="fab fa-facebook"></i> 
+            </a>
+          </li>
+          <li>
+            <a href="your_telegram_profile_url" aria-label="Telegram">
+              <i class="fab fa-telegram"></i> 
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    const form = document.getElementById('contact-form');
+  
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); 
+  
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+  
+      // Basic validation
+      if (name === '' || email === '' || message === '') {
+        alert('Please fill in all fields.');
+        return;
+      }
+  
+      // Simulate sending the email (replace with actual email sending logic)
+      console.log('Sending email...');
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Message:', message);
+  
+      alert('Thank you for your message!');
+      form.reset();
+    });
+  </script>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <h2>MadeByClyd</h2>
+          <p>"Driven by passion, powered by innovation — building systems that shape the future."</p>
+          <div class="footer-icons">
+            <a href="#"><i class="fas fa-phone"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Works</a></li>
+            <li><a href="#contact">Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2024 Justin Clyd. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
